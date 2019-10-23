@@ -1,4 +1,4 @@
-FROM docker.bluelight.limited:5000/feingkai/microkube-install-image:latest
+FROM docker.bluelight.limited:5000/feingkai/mkiii-install-image:latest
 
 # ENV RUBY_VER=2.5.3
 ENV RUBY_VER=2.6.0
