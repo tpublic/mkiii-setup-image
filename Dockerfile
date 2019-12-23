@@ -15,6 +15,7 @@ RUN     . /etc/rvmrc && \
         echo 'Replacing in multiple files' && \
         sed -i 's/rabbitmq/\"rabbitmq.mkiii:5672\"/g' templates/config/*.env.erb && \
         sed -i 's/EVENT_API_RABBITMQ_PORT=5672/EVENT_API_RABBITMQ_PORT=/g' templates/config/*.env.erb && \
+        sed -i 's,git@github.com:,https://github.com/,g' templates/config/*.env.erb && \
         cat templates/config/peatio.env.erb && \
         bundle exec rake render:config && \
         bundle exec rake vendor:clone && \
