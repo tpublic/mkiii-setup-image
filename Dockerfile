@@ -17,6 +17,7 @@ RUN     . /etc/rvmrc && \
         sed -i 's/EVENT_API_RABBITMQ_PORT=5672/EVENT_API_RABBITMQ_PORT=/g' templates/config/*.env.erb && \
         cat templates/config/peatio.env.erb && \
         bundle exec rake render:config && \
+        bundle exec rake vendor:clone && \
         echo 'Finished setup' " 
         
 
